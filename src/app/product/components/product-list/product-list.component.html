@@ -1,0 +1,25 @@
+<div class="product-list-wrapper">
+    <div class="dropdown">
+        <h3>Filter Products</h3>
+        <select class="filter" [(ngModel)]="fieldName">
+            <option class="values" value="Low">Low To High</option>
+            <option class="values" value="High">High To low</option>
+        </select>
+    </div>
+
+    <div class="list">
+        <div class="col-4 col-sm-4 col-md-4 col-lg-4">
+            <table class="container">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+                <tr *ngFor="let productItem of productItems | sort : 'price': fieldName">
+                    <td>{{productItem.name}}</td>
+                    <td>{{productItem.price | currency :'INR'}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+</div>

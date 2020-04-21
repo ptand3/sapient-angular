@@ -1,0 +1,16 @@
+<p>Countdown Timer Limit</p>
+<div class="row">
+    <div class="col-md-4">
+        <label>Timer Limit</label>
+        <input type="text" class="form-control" [(ngModel)]="newTimerLimit">
+        <p>Count Down Timer is :{{counter}}</p>
+    </div>
+    <div class="col-md-4">
+        <p>Started :{{start}} </p>
+        <p>Paused : {{pause}} </p>
+    </div>
+</div>
+<span class="timespan"></span>
+<button type="button" (click)="startCountdown(newTimerLimit)">Start</button>
+<button type="button" (click)="pauseCountdown(newTimerLimit)">Pause</button>
+<button type="button" (click)="resetCountdown(newTimerLimit)">Reset</button>

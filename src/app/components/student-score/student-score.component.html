@@ -1,0 +1,19 @@
+<h1>Student Record</h1>
+
+<span>Sorting implemented by Subject1 Header</span>
+<div class="list">
+    <table class=" table table-hover">
+        <thead>
+            <tr>
+                <th *ngFor="let head of items[0] | keys" (click)="handleClick($event)">{{head}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of items ">
+                <td *ngFor="let list of item |keys ">
+                    {{item[list]}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
